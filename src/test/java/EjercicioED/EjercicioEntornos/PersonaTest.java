@@ -38,5 +38,16 @@ class PersonaTest {
 
 	        assertTrue(edad >= 0);
 	    }
+	 
+	 /**
+	  * Comprueba que el método compareTo ordena correctamente
+	  * las personas en función de su NIF.
+	  */
+	 @Test
+	 void testCompareTo() {
+	     Persona p1 = new Persona(1, "A", 'M', 1, 1, 2000);
+	     Persona p2 = new Persona(2, "B", 'M', 1, 1, 2000);
 
+	     assertTrue(p1.compareTo(p2) < 0);
+	 }
 }
