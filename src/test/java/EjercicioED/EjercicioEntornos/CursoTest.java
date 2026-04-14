@@ -36,4 +36,16 @@ class CursoTest {
 
         assertEquals("DAW", curso.getNombre());
     }
+	
+	/**
+	 * Comprueba que el objeto Curso se crea correctamente
+	 * y que su representación en texto no es nula.
+	 */
+	@Test
+	final void testCurso() {
+	      Curso curso = new Curso("DAW");
+
+	        assertNotNull(curso);
+	        assertTrue(curso.toString().contains("DAW"));
+	    }
 }
